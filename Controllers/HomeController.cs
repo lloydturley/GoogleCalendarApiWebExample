@@ -28,6 +28,7 @@ namespace GoogleCalendarApiWebExample.Controllers
         public async Task<IActionResult> Index([FromServices] IGoogleAuthProvider auth)
         {
             GoogleCredential cred = await auth.GetCredentialAsync();
+            
 
             var service = new CalendarService(new BaseClientService.Initializer()
             {
